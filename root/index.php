@@ -137,4 +137,21 @@ $stafInfo = $staf->all();
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.79/jquery.form-validator.min.js"></script>
 
   <script src="script.js" type="text/javascript"></script>
+
+
+
+  <script>
+  if('geolocation' in navigator){
+      console.log('gelocation available');
+      navigator.geolocation.getCurrentPosition(position=>{
+          console.log(position);
+      });}
+      else
+      {
+          console.log('geolocaation not available');
+      }
+  
+  
+  
+  </script>
 </html>
