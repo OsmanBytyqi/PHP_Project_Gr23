@@ -17,6 +17,11 @@
     <footer>
         <div class="image">
             <p>~ About Us ~</p>
+			<br>
+			<?php
+			//setrawcookie("Restaurant", rawurlencode("welcome message"), time()+120);
+            echo $_COOKIE['Restaurant'];
+			   ?>
             <img class="pic" src="images/aboutUsView.jpg">
         </div>
         <div class="text-2">
@@ -40,15 +45,10 @@
                 The Michelin star rating didn’t take hold in America until 2005 and concentrated solely on fine dining in New York.
                 Tokyo, Hong Kong, and<br>Macau were added to the Guide between 2007-2008. It now covers 23 countries, with 14 editions sold in 90 countries around the world.
                 <br>The Michelin Guide only touches on a small number of US cities – Chicago, New York, Los Angeles, Las Vegas, and San Francisco. 
-                <br>
+                <br>WELCOME......
                </p>
 				<br>
                 <?php
-                setrawcookie("Restaurant", rawurlencode("welcome message"), time()+120);
-                //echo $_COOKIE['Restaurant'];
-                ?>
-				 
-				 	 <?php
 					 $string = 'Life is as aa restaurantt you can have anything you want as long as you are willing to pay the price.';
 					 $patterns = array();
 					 $patterns[0] = '/as/';
