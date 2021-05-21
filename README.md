@@ -9,10 +9,17 @@
 
 ---
 
-## Krijimi i një ueb aplikacioni në kuadërtë domenit të përcaktuar `PHP`, `MySQL`, `AJAX` dhe `WebAPI`
+### Krijimi i një ueb aplikacioni në kuader te domenit të përcaktuar `PHP`, `MySQL`, `AJAX` dhe `WebAPI`
 
 ---
+## Table of Contents
 
+
+- [Technologies](#Technologies)
+- [Features](#Features)
+- [Resources](#Resources)
+- [License & CopyRight](#License-&-CopyRight)
+---
 ## Technologies 
  Project is created with:
   

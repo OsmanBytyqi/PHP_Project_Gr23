@@ -42,7 +42,11 @@
                 <br>The Michelin Guide only touches on a small number of US cities – Chicago, New York, Los Angeles, Las Vegas, and San Francisco. 
                 <br>
                </p>
-				
+				<br>
+                <?php
+                setrawcookie("Restaurant", rawurlencode("welcome message"), time()+120);
+                //echo $_COOKIE['Restaurant'];
+                ?>
 				 
 				 	 <?php
 					 $string = 'Life is as aa restaurantt you can have anything you want as long as you are willing to pay the price.';
