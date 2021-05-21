@@ -20,33 +20,44 @@
             <img class="pic" src="images/aboutUsView.jpg">
         </div>
         <div class="text-2">
-            <h2>Biography</h2>
-            <p>Standing at the entrance to the restaurant you are immediately inundated by the aroma of escargots, filet mignons,<br>
-               and roasted ducklings being served. These delicious smells are enough to make your mouth water and your stomach begin to growl.<br>
+            <h2>Details&Others</h2>
+            <p>The ambiance is very welcoming and charming. Amazing wines, food and service. Staff are extremely knowledgeable and make <br>
+			great recommendations. These delicious smells are enough to make your mouth water and your stomach begin to growl.
                <br>
-               <br>
-               <br>
-                Located at 201 West Orange Street in downtown Lancaster, The Loft is renowned for its unique atmosphere and even more so,<br>
-               for its outstanding cuisine. The building in which The Loft is located, has been a dining establishment since the late 1800's.<br> 
-               The eatery preceding The Loft was called Buckius Café. The original restaurant owner gave the name, The Loft, to the establishment<br>
-                in October of 1973.<br>
+			   <br>
+			   <br>
+               This restaurant is situated in the heart of a semi-urban area near a motorsports academy. It is a favorite hangout for motorsports lovers.<br>
+            The decor is a stunning mix of vintage sports cars, luxury, and modernity. Every table provides a clear view of the chef working in the<br>
+           kitchen.Diners without reservation are invited to wait in a beautifully decorated lounge with comfortable armchairs and thematic artwork.<br>
                 <br>
                 <br>
+                The first Michelin star ratings were given in 1926 – restaurants in France were awarded a single star if they
+				were considered to be<br>
+				“fine dining establishments”.
+                In 1931 the rating system was expanded to become the Michelin three-star rating…  
+				<br>
                 <br>
-                Why the restaurant is called The Loft is obvious when you enter the second of two dining rooms. Looking upwards you will<br>
-                see a rustic, open beam design that is adorned with potted plants and various antiques. Lining the walls are various knick-knacks<br> 
-                and framed paintings from all over the world.<br>
+                The Michelin star rating didn’t take hold in America until 2005 and concentrated solely on fine dining in New York.
+                Tokyo, Hong Kong, and<br>Macau were added to the Guide between 2007-2008. It now covers 23 countries, with 14 editions sold in 90 countries around the world.
+                <br>The Michelin Guide only touches on a small number of US cities – Chicago, New York, Los Angeles, Las Vegas, and San Francisco. 
                 <br>
-                <br>
-                In 1987, European Master Chef, Gunter Backhaus bought the restaurant. At the time Backhaus was quoted as saying that it was his<br>
-                goal to make The Loft one of the finest restaurants in Lancaster. According to patrons that have been eating at the restaurant for<br>
-                years, he has accomplished this goal.<br>
-                <br>
-                <br>
-                <br>
-                Although owning his own restaurant was a new experience for Backhaus, cooking was not. Backhaus began his culinary career as an <br>
-                apprentice in Dusseldorf, Germany. Gaining the culinary skills he needed, Backhaus left his native Germany at the age of 18 to<br>
-                 pursue bigger and better culinary opportunities. He traveled the world, working in hotels and restaurants in places such as Mexico,<br>
-                 Bermuda, France, the Bahamas, Spain and England. The next stop on Backhaus' journey was the United States.</p>
+               </p>
+				
+				 
+				 	 <?php
+					 $string = 'Life is as aa restaurantt you can have anything you want as long as you are willing to pay the price.';
+					 $patterns = array();
+					 $patterns[0] = '/as/';
+					 $patterns[1] = '/aa/';
+					 $patterns[2] = '/restaurantt/';
+					 $replacements = array();
+					 $replacements[2] = 'like';
+					 $replacements[1] = 'a';
+					 $replacements[0] = 'restaurant';
+					 echo preg_replace($patterns, $replacements, $string);
+					 ?>
+					 <br>
+					 <br>
+					 <br>
         </div>
     </footer>
