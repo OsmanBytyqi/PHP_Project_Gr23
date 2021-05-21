@@ -123,7 +123,7 @@ $stafInfo = $staf->all();
       <div class="box">
       <form class="contact-form" action="contact.php" method="post">
               <input type="text" name="name" class="form-control" placeholder="Enter your name." ><br>
-              <input type="email" name="email" class="form-control" placeholder="Enter your email." require data-validation="length alphanumeric" data-validation-length="min4"><br>
+              <input type="email" name="email" class="form-control" placeholder="Enter your email."><br>
               <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
               <input type="submit" name="" class="form-control submit"  value="SEND MESSAGE">
 
