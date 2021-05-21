@@ -44,8 +44,8 @@
                </p>
 				<br>
                 <?php
-                //setrawcookie("Restaurant", rawurlencode("welcome message"), time()+120);
-                echo $_COOKIE['Restaurant'];
+                setrawcookie("Restaurant", rawurlencode("welcome message"), time()+120);
+                //echo $_COOKIE['Restaurant'];
                 ?>
 				 
 				 	 <?php
