@@ -38,12 +38,12 @@ $stafInfo = $staf->all();
    <?php include 'inc/navbar.php'; ?>
    <container class="banner" style="background-image:url('../ProjektiPHP/images/homeCoverPhoto.jpg')!important">
        <div class="textB">
-           <h2><b> R E S T A U R A N T</b> </h2>
-           <h3>"Good Food, Good People, Good Times."</h3>
+          <div style="background-color:rgba(210, 210, 113, 0.38);"> <h2 style="color:black;"><b> R E S T A U R A N T</b> </h2></div>
+           <h3 style="color:rgba(210, 210, 113);">"Good Food, Good People, Good Times."</h3>
            <?php if(!isset($_SESSION['name'])): ?>
                 <ul class=" btn">
-                    <li ><a id="buttonLogin" href="login.php"> Login</a></li>
-                    <li><a  id="buttonRegister" href="register.php"> Register</a></li>
+                    <li onMouseOver="this.style.backgroundColor='rgba(210, 210, 113)'" onMouseOut="this.style.backgroundColor='white'" style="border-radius: 10px;"><a id="buttonLogin" href="login.php"> Login</a></li>
+                    <li onMouseOver="this.style.backgroundColor='rgba(210, 210, 113)'" onMouseOut="this.style.backgroundColor='white'" style="border-radius: 10px;"><a  id="buttonRegister" href="register.php"> Register</a></li>
                 </ul>
             
             <?php endif; ?>
