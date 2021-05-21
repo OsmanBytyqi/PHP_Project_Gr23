@@ -9,7 +9,7 @@
 
 ---
 
-## Krijimi i një ueb aplikacioni në kuadërtë domenit të përcaktuar `PHP`, `MySQL`, `AJAX` dhe `WebAPI`
+### Krijimi i një ueb aplikacioni në kuadërtë domenit të përcaktuar `PHP`, `MySQL`, `AJAX` dhe `WebAPI`
 
 ---
 
