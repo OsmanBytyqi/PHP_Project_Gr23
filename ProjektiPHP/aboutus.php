@@ -17,6 +17,7 @@
     <footer>
         <div class="image">
             <p>~ About Us ~</p>
+			<br>
             <img class="pic" src="images/aboutUsView.jpg">
         </div>
         <div class="text-2">
@@ -43,12 +44,12 @@
                 <br>
                </p>
 				<br>
+                <br>
                 <?php
-                setrawcookie("Restaurant", rawurlencode("welcome message"), time()+120);
-                //echo $_COOKIE['Restaurant'];
-                ?>
-				 
-				 	 <?php
+			setrawcookie("Restaurant", rawurlencode("welcome message"), time()+120);
+            //echo $_COOKIE['Restaurant'];
+			   ?>
+                <?php
 					 $string = 'Life is as aa restaurantt you can have anything you want as long as you are willing to pay the price.';
 					 $patterns = array();
 					 $patterns[0] = '/as/';

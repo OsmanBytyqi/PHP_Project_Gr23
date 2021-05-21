@@ -147,19 +147,14 @@ $stafInfo = $staf->all();
             </form>
         </div>
         <div id="instafeed"></div>
-   
+     <br>
+         <ul class=" btn" style="margin-right:20px">
+                    <li onMouseOver="this.style.backgroundColor='rgba(210, 210, 113)'" onMouseOut="this.style.backgroundColor='white'" style="border-radius: 10px;"><a id="buttonLogin" href="../ProjektiPHP/fb-login/index.php"> Login with FB</a></li>
+        </ul>
   </footer>
 
 </body>
-<script src="path/to/instafeed.min.js"></script>
-  <script>
-    var feed = new Instafeed({
-      get: 'user',
-      userId: USER_ID, // Ex: 1374300081
-      accessToken: 'YOUR_ACCESS_TOKEN'
-    });
-    feed.run();
-  </script>
+
   <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.79/jquery.form-validator.min.js"></script>
   <script>
