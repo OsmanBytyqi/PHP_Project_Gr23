@@ -34,7 +34,7 @@ $stafInfo = $staf->all();
 
 <body>
    <?php include 'inc/navbar.php'; ?>
-   <container class="banner">
+   <container class="banner" style="background-image:url('../ProjektiPHP/images/homeCoverPhoto.jpg')!important">
        <div class="textB">
            <h2><b> R E S T A U R A N T</b> </h2>
            <h3>"Good Food, Good People, Good Times."</h3>
@@ -60,21 +60,21 @@ $stafInfo = $staf->all();
                 <input type="radio" name="images" id="i3">
 
                 <div class="slide_img" id="one">
-                    <img src="images/salad.jpg" width="200" height="200">
+                    <img src="images/beef.jpg" width="200" height="200">
 
                     <label for="i3" class="pre"></label>
                     <label for="i2" class="nxt"></label>
                 </div>
 
                 <div class="slide_img" id="two">
-                    <img src="images/rizoto.jpg"  width="200" height="200">
+                    <img src="images/pizza2.jpg"  width="200" height="200">
 
                     <label for="i1" class="pre"></label>
                     <label for="i3" class="nxt"></label>
                 </div>
 
                 <div class="slide_img" id="thre">
-                    <img src="images/cake.jpg"  width="200" height="200">
+                    <img src="images/pasta.jpg"  width="200" height="200">
 
                     <label for="i2" class="pre"></label>
                     <label for="i1" class="nxt"></label>
@@ -121,10 +121,10 @@ $stafInfo = $staf->all();
           
       </div>
       <div class="box">
-          <form class="contact-form" action="index.html" method="post">
-              <input type="text" name="name" class="form-control" placeholder="Enter your name." required data-validation="length alphanumeric" data-validation-length="min4"><br>
-              <input type="email" name="email" class="form-control" placeholder="Enter your email." required><br>
-              <textarea name="message" class="form-control" placeholder="Message" rows="4" data-validation="length" data-validation-length="min20" required></textarea><br>
+      <form class="contact-form" action="contact.php" method="post">
+              <input type="text" name="name" class="form-control" placeholder="Enter your name." ><br>
+              <input type="email" name="email" class="form-control" placeholder="Enter your email." require data-validation="length alphanumeric" data-validation-length="min4"><br>
+              <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
               <input type="submit" name="" class="form-control submit"  value="SEND MESSAGE">
 
           </form>
@@ -138,10 +138,9 @@ $stafInfo = $staf->all();
 
   <script src="script.js" type="text/javascript"></script>
 
-
-
   <script>
-  if('geolocation' in navigator){
+
+if('geolocation' in navigator){
       console.log('gelocation available');
       navigator.geolocation.getCurrentPosition(position=>{
           console.log(position);
@@ -150,8 +149,6 @@ $stafInfo = $staf->all();
       {
           console.log('geolocaation not available');
       }
-  
-  
   
   </script>
 </html>
