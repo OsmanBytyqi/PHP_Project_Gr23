@@ -18,6 +18,8 @@ $stafInfo = $staf->all();
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Andika+New+Basic&family=Dancing+Script:wght@700&family=Indie+Flower&display=swap" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
     <script src="responsiveslides.min.js"></script>
     <script>
         $(function () {
@@ -120,21 +122,111 @@ $stafInfo = $staf->all();
           <h1>CONTACT US</h1>
           
       </div>
-      <div class="box">
+      <!-- <div class="box">
       <form class="contact-form" action="contact.php" method="post">
               <input type="text" name="name" class="form-control" placeholder="Enter your name." ><br>
-              <input type="email" name="email" class="form-control" placeholder="Enter your email." require data-validation="length alphanumeric" data-validation-length="min4"><br>
+              <input type="email" name="email" class="form-control" placeholder="Enter your email."><br>
               <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
-              <input type="submit" name="" class="form-control submit"  value="SEND MESSAGE">
+              <input type="submit" name="submit" class="form-control submit"  value="SEND MESSAGE">
 
           </form>
-      </div>
+      </div> -->
+
+
+
+      <div class="box">
+            <form action="contact.php" method="post" id="myform" class="contact-form">
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name." required><br>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email." required><br>
+                <textarea name="message" class="form-control" id="message" placeholder="Message" rows="4" required></textarea><br>
+                <input type="button" name="submit" class="form-control submit"  value="SEND MESSAGE" id="submit" onclick="submitForm()" require>
+                <span id="error_message" class="text-danger"></span>  
+                <span id="success_message" class="text-success"></span>  
+                </form>  
+  
+            </form>
+        </div>
    
   </footer>
 
 </body>
   <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.79/jquery.form-validator.min.js"></script>
+  <script>
+  
+
+$(document).ready(function(){
+
+    $("#submit").click(function(){
+
+        var name=$("#name").val();
+        var email=$("#email").val();
+        var message=$("#message").val();
+
+        if(name == '' || email==''|| message == '')  
+           {  
+                $('#error_message').html("All Fields are required");  
+           }  
+
+           else{
+
+            $('#error_message').html('');  
+            $.ajax({  
+                     url:"contact.php",  
+                     method:"POST",  
+                     data:{name:name,email:email,message:message}, 
+                     success:function(data){  
+                          $("form").trigger("reset");  
+                          $('#success_message').fadeIn().html(data);  
+                          setTimeout(function(){  
+                               $('#success_message').fadeOut("Slow");  
+                          }, 2000);  
+                     }  
+                });  
+
+           }
+
+
+
+    })
+
+
+
+});
+
+
+//    $(document).ready(function(){
+//             $("#submit").click(function(){
+//                 var name=$("#name").val();
+//                 var email=$("#email").val();
+//                 var message=$("#message").val();
+
+//                 $.ajax({
+//                     url:"contact.php",
+//                     method:"post",
+//                     data:{name:name,email:email,message:message},
+//                     success:function(data){
+//                         alert('your message has been sent!')
+//                     }
+                    
+
+//                 })
+
+
+                
+//             })
+
+
+//         })
+
+    //     function submitForm() {
+ 
+    //   $('input[type="text"]').reset();
+    
+
+
+
+  </script>
 
   <script src="script.js" type="text/javascript"></script>
 
@@ -149,6 +241,6 @@ if('geolocation' in navigator){
       {
           console.log('geolocaation not available');
       }
-  
+
   </script>
 </html>

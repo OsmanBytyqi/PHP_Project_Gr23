@@ -52,36 +52,43 @@ if(isset($_POST["name"])&&isset($_POST["email"])&&isset($_POST["message"])){
     <script>
         
         $(document).ready(function(){
-            $("#submit").click(function(){
-                var name=$("#name").val();
-                var email=$("#email").val();
-                var message=$("#message").val();
 
-                $.ajax({
-                    url:"contact.php",
-                    method:"post",
-                    data:{name:name,email:email,message:message},
-                    success:function(data){
-                        alert('your message has been sent!')
-                    }
-                    
+$("#submit").click(function(){
 
-                })
-            })
+    var name=$("#name").val();
+    var email=$("#email").val();
+    var message=$("#message").val();
+
+    if(name == '' || email==''|| message == '')  
+       {  
+            $('#error_message').html("All Fields are required");  
+       }  
+
+       else{
+
+        $('#error_message').html('');  
+        $.ajax({  
+                 url:"contact.php",  
+                 method:"POST",  
+                 data:{name:name,email:email,message:message}, 
+                 success:function(data){  
+                      $("form").trigger("reset");  
+                      $('#success_message').fadeIn().html(data);  
+                      setTimeout(function(){  
+                           $('#success_message').fadeOut("Slow");  
+                      }, 2000);  
+                 }  
+            });  
+
+       }
 
 
-        })
 
-        let clear=document.getElementsByClassName("#form-control submit");
-        
+})
 
-        clear.addEventListener('click',(e)=>{
-        let name=document.getElementById("#name").value="";
-        let email=document.getElementById("#email").value="";
-        let message=document.getElementById("#message").value="";
 
-        });
-       
+
+});
 
 
     </script>
